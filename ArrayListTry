@@ -1,0 +1,38 @@
+package com;
+import java.util.*;  
+public class ArrayListTry {
+	public static void main(String [] args)  
+    {  
+      ArrayList<String> al=new ArrayList<String>();  
+      al.add("kisan");    
+      al.add("yash");    
+      al.add("rohan");   
+      al.add("siddik");  
+      al.add("kartik");  
+      System.out.println("An initial list of elements: "+al);   
+      
+      al.remove("yash");  
+      System.out.println("After invoking remove(object) method: "+al);   
+      
+      al.remove(0);  
+      System.out.println("After invoking remove(index) method: "+al);   
+        
+      
+      ArrayList<String> al2=new ArrayList<String>();    
+      al2.add("kisan");    
+      al2.add("Hanumat");    
+     
+      al.addAll(al2);  
+      System.out.println("Updated list : "+al);   
+     
+      al.removeAll(al2);  
+      System.out.println("After invoking removeAll() method: "+al);   
+        
+      al.removeIf(str -> str.contains("rohan"));   //Here, we are using Lambda expression   
+      System.out.println("After invoking removeIf() method: "+al);  
+      
+      al.clear();  
+      System.out.println("After invoking clear() method: "+al);   
+   }  
+}
+
